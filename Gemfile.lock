@@ -76,6 +76,7 @@ GEM
       public_suffix (>= 2.0.2, < 7.0)
     ast (2.4.3)
     base64 (0.3.0)
+    bcrypt (3.1.20)
     bcrypt_pbkdf (1.1.1)
     benchmark (0.4.1)
     bigdecimal (3.2.2)
@@ -103,11 +104,18 @@ GEM
       reline (>= 0.3.8)
     dotenv (3.1.8)
     drb (2.2.3)
+    dry-cli (1.3.0)
     ed25519 (1.4.0)
     erb (5.0.2)
     erubi (1.13.1)
     et-orbi (1.3.0)
       tzinfo
+    faraday (2.13.4)
+      faraday-net_http (>= 2.0, < 3.5)
+      json
+      logger
+    faraday-net_http (3.4.1)
+      net-http (>= 0.5.0)
     fugit (1.11.2)
       et-orbi (~> 1, >= 1.2.11)
       raabro (~> 1.4)
@@ -155,6 +163,10 @@ GEM
     mini_mime (1.1.5)
     minitest (5.25.5)
     msgpack (1.8.0)
+    mutex_m (0.3.0)
+    mysql2 (0.5.6)
+    net-http (0.6.0)
+      uri
     net-imap (0.5.10)
       date
       net-protocol
@@ -206,6 +218,8 @@ GEM
     raabro (1.4.0)
     racc (1.8.1)
     rack (3.2.0)
+    rack-proxy (0.7.7)
+      rack
     rack-session (2.1.1)
       base64 (>= 0.1.0)
       rack (>= 3.0.0)
@@ -304,13 +318,6 @@ GEM
       fugit (~> 1.11.0)
       railties (>= 7.1)
       thor (>= 1.3.1)
-    sqlite3 (2.7.3-aarch64-linux-gnu)
-    sqlite3 (2.7.3-aarch64-linux-musl)
-    sqlite3 (2.7.3-arm-linux-gnu)
-    sqlite3 (2.7.3-arm-linux-musl)
-    sqlite3 (2.7.3-arm64-darwin)
-    sqlite3 (2.7.3-x86_64-linux-gnu)
-    sqlite3 (2.7.3-x86_64-linux-musl)
     sshkit (1.24.0)
       base64
       logger
@@ -337,6 +344,15 @@ GEM
     unicode-emoji (4.0.4)
     uri (1.0.3)
     useragent (0.16.11)
+    vite_rails (3.0.19)
+      railties (>= 5.1, < 9)
+      vite_ruby (~> 3.0, >= 3.2.2)
+    vite_ruby (3.9.2)
+      dry-cli (>= 0.7, < 2)
+      logger (~> 1.6)
+      mutex_m
+      rack-proxy (~> 0.6, >= 0.6.1)
+      zeitwerk (~> 2.2)
     web-console (4.2.1)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -363,13 +379,16 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
+  bcrypt (~> 3.1)
   bootsnap
   brakeman
   capybara
   debug
+  faraday (~> 2.13)
   importmap-rails
   jbuilder
   kamal
+  mysql2 (~> 0.5.6)
   propshaft
   puma (>= 5.0)
   rails (~> 8.0.2, >= 8.0.2.1)
@@ -378,11 +397,11 @@ DEPENDENCIES
   solid_cable
   solid_cache
   solid_queue
-  sqlite3 (>= 2.1)
   stimulus-rails
   thruster
   turbo-rails
   tzinfo-data
+  vite_rails (~> 3.0)
   web-console
 
 BUNDLED WITH

@@ -11,4 +11,15 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  resource :miniapp, only: [:show] do
+  end
+  namespace :auth do
+    resource :line, only: [] do
+      post :verify
+    end
+    resource :password, only: [] do
+      post :register
+      post :login
+    end
+  end
 end

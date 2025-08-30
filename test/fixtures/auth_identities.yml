@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  provider: MyString
+  issuer: MyString
+  audience: MyString
+  subject: MyString
+  password_digest: MyString
+  connected_at: 2025-08-30 14:13:03
+  last_login_at: 2025-08-30 14:13:03
+  meta: MyString
+
+two:
+  user: two
+  provider: MyString
+  issuer: MyString
+  audience: MyString
+  subject: MyString
+  password_digest: MyString
+  connected_at: 2025-08-30 14:13:03
+  last_login_at: 2025-08-30 14:13:03
+  meta: MyString

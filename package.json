@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
+    "vite": "^5.4.19",
+    "vite-plugin-ruby": "^5.1.1"
+  },
+  "dependencies": {
+    "@line/liff": "^2.27.1",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  }
+}
