@@ -62,7 +62,7 @@ end
 
 gem "vite_rails", "~> 3.0"
 
-gem "mysql2", "~> 0.5.6"
+gem "mysql2", "~> 0.5.7"
 
 gem "faraday", "~> 2.13"
 
