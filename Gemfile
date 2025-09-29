@@ -64,6 +64,6 @@ gem "vite_rails", "~> 3.0"
 
 gem "mysql2", "~> 0.5.6"
 
-gem "faraday", "~> 2.13"
+gem "faraday", "~> 2.14"
 
 gem "bcrypt", "~> 3.1"
